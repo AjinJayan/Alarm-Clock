@@ -1,6 +1,10 @@
 # Alarm Clock
-Alarm Clock Using HTML, CSS, Vanila JavaScript -- Coding Ninjas Skill Test 1
+Alarm Clock -- Coding Ninjas Skill Test 1
 
+## Build With:
+* HTML
+* CSS
+* Vanilla JavaScript
 
 https://github.com/user-attachments/assets/83ad07eb-b80e-4686-a6cb-7f307e8754fd
 
@@ -22,4 +26,6 @@ Clone the Repo and launch index.html in any browser:
 ```
 https://github.com/AjinJayan/Alarm-Clock-.git
 ```
+## Authors
+@AjinJayan
 
