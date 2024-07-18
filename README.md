@@ -16,3 +16,10 @@ https://github.com/user-attachments/assets/83ad07eb-b80e-4686-a6cb-7f307e8754fd
 
 https://ajinjayan.github.io/Alarm-Clock-/
 
+## Getting Started 
+
+Clone the Repo and launch index.html in any browser: 
+```
+https://github.com/AjinJayan/Alarm-Clock-.git
+```
+
