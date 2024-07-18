@@ -6,6 +6,7 @@ Alarm Clock -- Coding Ninjas Skill Test 1
 * CSS
 * Vanilla JavaScript
 
+
 https://github.com/user-attachments/assets/83ad07eb-b80e-4686-a6cb-7f307e8754fd
 
 ## Features
