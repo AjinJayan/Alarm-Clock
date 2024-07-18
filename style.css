@@ -60,4 +60,5 @@ body {
     height: 30px;
     color: white;
     animation: moveup 0.8s ease-in-out;
+    /* Animation to show the time left Once we set an Alarm */
 }

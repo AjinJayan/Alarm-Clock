@@ -69,6 +69,8 @@ function displayAlarmTimeLeft(alarm) {
     const timeLeft = timeLeftForAlarm(alarm)
     timeleftdivElement.innerText = `${timeLeft.hoursleft} hours ${timeLeft.minutesLeft} minutes ${timeLeft.secondsLeft} seconds from now    `
     timeleftdivElement.style.display = "block"
+
+    // Time left will show for 2 seconds, then it will vanish
     setTimeout(() => {
         timeleftdivElement.style.display = "none"
     }, 2000)
@@ -88,13 +90,14 @@ setAlarmButtonElement.addEventListener("click", () => {
     const AlarmElement = document.createElement("div")
     const newAlarm = `${inputHourElement.value} : ${inputMinuteElement.value} : ${inputSecondElement.value} ${inputAMPMElement.value}`
 
+    // checking if alarm already exist, if it doest'not exist then it will add a new alarm
     if (!alarm_list.includes(newAlarm)) {
         AlarmElement.innerText = newAlarm
         AlarmElement.id = newAlarm
-        AlarmElement.classList.add("new-alarm")
+        AlarmElement.classList.add("new-alarm") // adding styling to new alarm
         alarm_list.push(newAlarm)
 
-        displayAlarmTimeLeft(newAlarm)
+        displayAlarmTimeLeft(newAlarm) // Display how much time left for the new alarm to ring
 
         const deleteButton = document.createElement("button")
         deleteButton.classList.add("btn", "btn-secondary")
@@ -104,7 +107,7 @@ setAlarmButtonElement.addEventListener("click", () => {
 
         deleteButton.addEventListener("click", () => {
             upcommingAlarmContainer.removeChild(AlarmElement)
-            alarm_list.pop(newAlarm)
+            alarm_list.splice(alarm_list.indexOf(newAlarm), 1); // removing the alarm once delete btn is clicked
 
         })
     }
@@ -113,21 +116,24 @@ setAlarmButtonElement.addEventListener("click", () => {
     }
 })
 
+/* This will display the current time and also checks if any alarm matches with the current time. If it exists
+it will alert the user, also ask for a whether to delete the alarm or keep it*/
 setInterval(() => {
 
-    displayCurrentTime()
+    displayCurrentTime() // Updating the time in every 1s 
     const currentTimeString = currentTime()
 
     if (alarm_list.includes(currentTimeString)) {
         alert("!!!!! Alarm !!!!!")
 
         if (confirm("Click Okay to Delete the Alarm")) {
-            alarm_list.pop(currentTimeString)
+            // removing the alarm 
+            alarm_list.splice(alarm_list.indexOf(currentTimeString), 1);
             const AlarmElement = document.getElementById(currentTimeString)
             upcommingAlarmContainer.removeChild(AlarmElement)
         }
     }
 }, 1000)
 
-displayCurrentTime()
-displayAlarmInput()
+displayCurrentTime() // Display current time intially 
+displayAlarmInput() // Display input field to take the user input for new alarm
