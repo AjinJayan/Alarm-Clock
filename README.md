@@ -25,7 +25,7 @@ https://ajinjayan.github.io/Alarm-Clock/
 
 Clone the Repo and launch index.html in any browser: 
 ```
-https://github.com/AjinJayan/Alarm-Clock-.git
+[https://github.com/AjinJayan/Alarm-Clock-.git](https://ajinjayan.github.io/Alarm-Clock/)
 ```
 ## Authors
 @AjinJayan
