@@ -76,7 +76,6 @@ function displayAlarmTimeLeft(alarm) {
     }, 2000)
 }
 
-
 const setAlarmButtonElement = document.getElementById("set-alarm-btn")
 const inputHourElement = document.getElementById("input-hour")
 const inputMinuteElement = document.getElementById("input-minute")
@@ -85,6 +84,9 @@ const inputAMPMElement = document.getElementById("input-am-pm")
 const upcommingAlarmContainer = document.getElementById("upcomming-alarms-container")
 const timeleftdivElement = document.getElementById("alarm-time-left")
 let alarm_list = []
+
+displayCurrentTime() // Display current time intially 
+displayAlarmInput() // Display input field to take the user input for new alarm
 
 setAlarmButtonElement.addEventListener("click", () => {
     const AlarmElement = document.createElement("div")
@@ -108,13 +110,13 @@ setAlarmButtonElement.addEventListener("click", () => {
         deleteButton.addEventListener("click", () => {
             upcommingAlarmContainer.removeChild(AlarmElement)
             alarm_list.splice(alarm_list.indexOf(newAlarm), 1); // removing the alarm once delete btn is clicked
-
         })
     }
     else {
         alert("Alarm Already Set")
     }
 })
+
 
 /* This will display the current time and also checks if any alarm matches with the current time. If it exists
 it will alert the user, also ask for a whether to delete the alarm or keep it*/
@@ -134,6 +136,3 @@ setInterval(() => {
         }
     }
 }, 1000)
-
-displayCurrentTime() // Display current time intially 
-displayAlarmInput() // Display input field to take the user input for new alarm
