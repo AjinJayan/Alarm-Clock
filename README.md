@@ -19,7 +19,7 @@ https://github.com/user-attachments/assets/83ad07eb-b80e-4686-a6cb-7f307e8754fd
 
 ## Website Hosted Link
 
-[https://ajinjayan.github.io/Alarm-Clock-/](https://ajinjayan.github.io/Alarm-Clock/)
+https://ajinjayan.github.io/Alarm-Clock/
 
 ## Getting Started 
 
